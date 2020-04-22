@@ -5,7 +5,7 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
-// import './plugins/element.js'
+ // import './plugins/element.js'
 Vue.prototype.$axios=axios;
 
 Vue.use(ElementUI)
