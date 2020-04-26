@@ -1,8 +1,13 @@
 package com.niit.vhr.model;
 
-import java.io.Serializable;
 import lombok.Data;
 
+import java.io.Serializable;
+
+/**
+ * menu_role
+ * @author 
+ */
 @Data
 public class MenuRole implements Serializable {
     private Integer id;
