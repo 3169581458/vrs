@@ -3,7 +3,6 @@ package com.niit.vhr.model;
 import lombok.Data;
 
 import java.io.Serializable;
-
 /**
  * role
  * @author 

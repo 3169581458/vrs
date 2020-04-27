@@ -1,7 +1,6 @@
 package com.niit.vhr.model;
 
 import lombok.Data;
-
 /**
  * @author : zhayh
  * @date : 2020-4-17 20:21

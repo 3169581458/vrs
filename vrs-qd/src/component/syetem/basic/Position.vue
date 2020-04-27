@@ -19,6 +19,13 @@
 
 				<el-table-column prop="createDate" label="创建时间" width="150px" show-overflow-tooltip>
 				</el-table-column>
+				
+				<el-table-column prop="enable" label="是否启用" width="150px">
+					<template slot-scope="scope">
+						<el-tag v-if="scope.row.enabled" type="success">已启用</el-tag>
+						<el-tag v-else type="warning">未启用</el-tag>
+					</template>
+				</el-table-column>
 
 				<el-table-column label="操作">
 					<template slot-scope="scope">
@@ -35,6 +42,10 @@
 			<div>
 				<el-tag>职位名称</el-tag>
 				<el-input class="update_input" size="small" v-model="updatePos.name"></el-input>
+			</div>
+			<div>
+				<el-tag>是否启用</el-tag>
+				<el-switch v-model="updatePos.enabled" class="update_input"></el-switch>
 			</div>
 			<span slot="footer" class="dialog-footer">
 				<el-button @click="dialogVisible = false" size="small">取 消</el-button>
@@ -54,7 +65,8 @@
 				},
 				tableData: [],
 				updatePos: {
-					name: ''
+					name: '',
+					enabled: true
 				},
 				dialogVisible: false,
 				multipleSelection: []
